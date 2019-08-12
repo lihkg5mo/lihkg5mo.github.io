@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Angular Material style sheet -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
+	<style>
+		.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+		.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+		.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+		.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+		
+		body {
+			font-family: 'Noto Sans TC', sans-serif !important;
+		}
+		.msg,
+		.exp {
+		    margin: 5px 0px;
+			padding: 5px;
+			display: inline-block;
+		}
+		md-sidenav {
+			height: 100vh !important;
+			/*
+			width: auto !important;
+			min-width: auto !important;
+			*/
+		}
+		md-list-item,
+		md-list-item > div {
+			height: 40px !important;
+			min-height: auto !important;
+		}
+		md-chip {
+			overflow: hidden !important;
+			text-overflow: ellipsis !important;
+			white-space: nowrap !important;
+		}
+		input[type="text"] {
+			font-size: small !important;
+		}
+	</style>
+	
+	<script src="./fifty-cents.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl" ng-cloak>
+		<div layout="row">
+			<md-sidenav md-component-id="side-nav" class="md-sidenav-left" md-component-id="left" md-is-open="true">
+				<md-toolbar layout="column" class="md-hue-1">
+					<div class="md-toolbar-tools">
+						<span>LIHKG五毛</span>
+						<span flex></span>
+						<md-button class="md-raised md-warn" href="mailto: lihkg5mo@gmail.com">提交五毛</md-button>
+					</div>
+					<input type="text" placeholder="Search" ng-model="keyword" />
+				</md-toolbar>
+				<md-content>
+					<md-list class="md-dense" flex>
+						<md-list-item class="md-3-line" ng-repeat="fiftyCent in fiftyCents| filter:{$:keyword}| orderBy:'uid' " ng-click="load(fiftyCent)">
+							<p>{{fiftyCent.uid}} - {{fiftyCent.name}}</p>
+						</md-list-item>
+					</md-list>
+				</md-content>
+			</md-sidenav>
+			<md-content flex>
+				<md-toolbar layout="row" class="md-hue-2">
+					<div class="md-toolbar-tools" layout="row">
+						<md-button class="md-icon-button" aria-label="Menu" ng-click="showSidenav()">
+							<i class="material-icons md-light">menu</i>
+						</md-button>
+						<span ng-show="!!fiftyCent">{{fiftyCent.uid}} - {{fiftyCent.name}}</span>
+						<span flex></span>
+						<md-button class="md-raised md-warn" ng-href="https://lihkg.com/profile/{{fiftyCent.uid}}" target="_blank" ng-show="!!fiftyCent">起底</md-button>
+					</div>
+				</md-toolbar>
+				<md-content ng-show="!!fiftyCent">
+					<md-card ng-repeat="topic in fiftyCent.topics">
+						<md-card-title>
+							<md-card-title-text>
+								<span class="md-headline">{{topic.topic}}</span>
+							</md-card-title-text>
+						</md-card-title>
+						<md-card-content>
+							<div>五毛留言:</div>
+							<div class="msg md-whiteframe-1dp">{{topic.msg}}</div>
+							<div>五毛原因:</div>
+							<div class="exp md-whiteframe-1dp">{{topic.exp}}</div>
+						</md-card-content>
+						<md-card-actions layout="row" layout-align="start center">
+							<md-button class="md-raised md-primary" ng-href="{{topic.link}}" target="_blank">睇POST</md-button>
+						</md-card-actions>
+					</md-card>
+				</md-content>
+			</md-content>
+		</div>
+	</div>
+
+	<!-- Angular Material requires Angular.js Libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+
+	<!-- Angular Material Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+
+	<script>
+		var app = angular.module('myApp', ['ngMaterial', 'ngMessages']);
+		app.controller('myCtrl', function($scope, $http, $mdMedia, $mdSidenav) {
+			$scope.$mdMedia = $mdMedia;
+			
+			$scope.showSidenav = function() {
+				$mdSidenav('side-nav').toggle().then(function() {});
+			}
+			
+			$scope.fiftyCents = getFiftyCents();
+			
+			$scope.fiftyCent = null;
+			$scope.load = function(fiftyCent) {
+				$scope.fiftyCent = fiftyCent;
+				$mdSidenav('side-nav').close().then(function() {});
+			}
+		});
+	</script>
+</body>
+</html>
