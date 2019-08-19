@@ -149,6 +149,19 @@ function getFiftyCents() {
 			exp: '撐警'
 		  }
 		]
+	  },
+	  {
+		uid: 198486,
+		name: '0099900',
+		topics: [
+		  {
+			tid: 1488528,
+			link: 'https://lihkg.com/thread/1488528/page/12?ref=sharer&post=285',
+			topic: '乜撚野裸跑，簡直影衰哂成個運動！',
+			msg: '根本場運動已經完左 條例都撒左啦 你地收手啦唔好再搞臭香港',
+			exp: '不作解釋'
+		  }
+		]
 	  }
 	];
 }
