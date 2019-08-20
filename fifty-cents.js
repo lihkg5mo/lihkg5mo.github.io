@@ -182,6 +182,19 @@ function getFiftyCents() {
 			exp: '叫人唔戴口罩。與POST 1489551，自相矛盾，懷疑分化'
 		  }
 		]
+	  },
+	  {
+		uid: 35285,
+		name: '野郎',
+		topics: [
+		  {
+			tid: 1489741,
+			link: 'https://lihkg.com/thread/1489741/page/1?ref=sharer&post=1',
+			topic: '屌你原來係自己人斬自己人！！！！',
+			msg: '快FC',
+			exp: '用五毛圖，屈手足'
+		  }
+		]
 	  }
 	];
 }
