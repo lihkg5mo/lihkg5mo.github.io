@@ -195,6 +195,26 @@ function getFiftyCents() {
 			exp: '用五毛圖，屈手足'
 		  }
 		]
+	  },
+	  {
+		uid: 178619,
+		name: 'iamsoalone',
+		topics: [
+		  {
+			tid: 1394510,
+			link: 'https://lihkg.com/thread/1394510/page/1?ref=sharer&post=1',
+			topic: '8月5罷工留俾d學生',
+			msg: '手停口停，我真係唔敢',
+			exp: '不作解釋'
+		  },
+		  {
+			tid: 1452575,
+			link: 'https://lihkg.com/thread/1452575/page/91?ref=sharer&post=2267',
+			topic: '［緊急！］[眼中槍女仔] 我係佢啊妹 2',
+			msg: '依家出面d藍絲不停講個傷係義士彈珠造成 又話點解唔報驚交x 光圖 點反駁?',
+			exp: '用五毛方法，屈手足'
+		  }
+		]
 	  }
 	];
 }
