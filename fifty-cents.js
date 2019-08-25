@@ -215,6 +215,19 @@ function getFiftyCents() {
 			exp: '用五毛方法，屈手足'
 		  }
 		]
+	  },
+	  {
+		uid: 95155,
+		name: '都市夜歸人',
+		topics: [
+		  {
+			tid: 1504853,
+			link: 'https://lihkg.com/thread/1504853/page/1?ref=sharer&post=1',
+			topic: '（緊急）救救呢位男仔',
+			msg: '有書唔讀有工唔番 走去做曱甴',
+			exp: '不作解釋'
+		  }
+		]
 	  }
 	];
 }
