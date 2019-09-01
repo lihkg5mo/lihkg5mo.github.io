@@ -1,5 +1,5 @@
 # lihkg5mo.github.io
 
-[五毛 List in LIHKG.com](https://lihkg5mo.github.io/)
+[LIHKG五毛](https://lihkg5mo.github.io/)
 
-[Fake Car](https://lihkg5mo.github.io/fakecar.html)
+[偽家長車牌](https://lihkg5mo.github.io/fakecar.html)
