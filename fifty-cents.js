@@ -66,19 +66,6 @@ function getFiftyCents() {
 		]
 	  },
 	  {
-		uid: 95155,
-		name: '都市夜歸人',
-		topics: [
-		  {
-			tid: 1444205,
-			link: 'https://lihkg.com/thread/1444205/page/15?ref=sharer&post=356',
-			topic: '其實今次運動 已經正式進入一個死結',
-			msg: '開學啦，返學啦乖！睇住你地既暴亂開始無所作為時，真係好L心涼！',
-			exp: '不作解釋'
-		  }
-		]
-	  },
-	  {
 		uid: 269498,
 		name: '緊急救援',
 		topics: [
@@ -213,19 +200,6 @@ function getFiftyCents() {
 			topic: '［緊急！］[眼中槍女仔] 我係佢啊妹 2',
 			msg: '依家出面d藍絲不停講個傷係義士彈珠造成 又話點解唔報驚交x 光圖 點反駁?',
 			exp: '用五毛方法，屈手足'
-		  }
-		]
-	  },
-	  {
-		uid: 95155,
-		name: '都市夜歸人',
-		topics: [
-		  {
-			tid: 1504853,
-			link: 'https://lihkg.com/thread/1504853/page/1?ref=sharer&post=1',
-			topic: '（緊急）救救呢位男仔',
-			msg: '有書唔讀有工唔番 走去做曱甴',
-			exp: '不作解釋'
 		  }
 		]
 	  }
