@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>偽家長車牌</title>
+	<meta name="description" content="偽家長車牌" />
+	
+	<!-- Angular Material style sheet -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
+	<style>
+		.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+		.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+		.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+		.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+		
+		body {
+			font-family: 'Noto Sans TC', sans-serif !important;
+		}
+		.msg,
+		.exp {
+			display: inline-block;
+		}
+		md-card {
+			height: 150px !important;
+			display: inline-block !important;
+		}
+		md-sidenav {
+			height: 100vh !important;
+			/*
+			width: auto !important;
+			min-width: auto !important;
+			*/
+		}
+		md-list-item,
+		md-list-item > div {
+			height: 40px !important;
+			min-height: auto !important;
+		}
+		md-chip {
+			overflow: hidden !important;
+			text-overflow: ellipsis !important;
+			white-space: nowrap !important;
+		}
+		input[type="text"] {
+			font-size: small !important;
+		}
+		.search-bar {
+			margin: 8px !important;
+		}
+	</style>
+	
+	<script src="./fake-cars.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl" ng-cloak>
+		<div layout="row">
+			<md-content flex>
+				<div class="search-bar">
+					<input type="text" placeholder="Search" ng-model="keyword" ng-change="filter()" />
+				</div>
+				<md-card ng-repeat="(key,val) in fakeCars">
+					<md-card-title>
+						<md-card-title-text>
+							<span class="md-headline">{{key}}</span>
+						</md-card-title-text>
+					</md-card-title>
+					<md-card-content>
+						<span class="msg">{{val}}</span>
+					</md-card-content>
+				</md-card>
+			</md-content>
+		</div>
+	</div>
+
+	<!-- Angular Material requires Angular.js Libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+
+	<!-- Angular Material Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+
+	<script>
+		var app = angular.module('myApp', ['ngMaterial', 'ngMessages']);
+		app.controller('myCtrl', function($scope, $http, $mdMedia, $mdSidenav) {
+			$scope.$mdMedia = $mdMedia;
+			
+			$scope.showSidenav = function() {
+				$mdSidenav('side-nav').toggle().then(function() {});
+			}
+			
+			$scope.fakeCars = {};
+			
+			var fakeCars = getFakeCars();
+			Object.keys(fakeCars).sort().forEach(function(key) {
+				$scope.fakeCars[key] = fakeCars[key];
+			});
+			
+			$scope.filter = function() {
+				$scope.fakeCars = {};
+				Object.keys(fakeCars).sort().forEach(function(key) {
+					if ($scope.keyword.trim() != '') {
+						if (key.toLowerCase().indexOf($scope.keyword.trim().toLowerCase()) > -1) {
+							$scope.fakeCars[key] = fakeCars[key];
+						}
+					} else {
+						$scope.fakeCars[key] = fakeCars[key];
+					}
+				});
+			}
+		});
+	</script>
+</body>
+</html>
