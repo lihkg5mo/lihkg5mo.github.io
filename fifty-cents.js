@@ -202,6 +202,26 @@ function getFiftyCents() {
 			exp: '用五毛方法，屈手足'
 		  }
 		]
+	  },
+	  {
+		uid: 35341,
+		name: '希比',
+		topics: [
+		  {
+			tid: 1384811,
+			link: 'https://lihkg.com/thread/1384811/page/1?ref=sharer&post=1',
+			topic: '唔係話批評 但影響到平民你地係咪要道歉先？［憤怒emoji]',
+			msg: '人地辛勞上班比你地影響到呀 你要爭取乜 用咩方式唔想批評 影響到人係咪要道歉呀',
+			exp: '不作解釋'
+		  },
+		  {
+			tid: 1535655,
+			link: 'https://lihkg.com/thread/1535655/page/62?ref=sharer&post=1530',
+			topic: '【蘋果fb live】示威者快閃旺角',
+			msg: '你講得幾好呢段 希望影響到人既廢青檢討下',
+			exp: '不作解釋'
+		  }
+		]
 	  }
 	];
 }
