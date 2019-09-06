@@ -100,7 +100,11 @@
 			
 			var fakeCars = getFakeCars();
 			Object.keys(fakeCars).sort().forEach(function(key) {
-				$scope.fakeCars[key] = fakeCars[key];
+				if ($scope.fakeCars[key] === undefined) {
+					$scope.fakeCars[key] = fakeCars[key];
+				} else {
+					console.log('duplicated plate: ' + key);
+				}
 			});
 			
 			$scope.filter = function() {
