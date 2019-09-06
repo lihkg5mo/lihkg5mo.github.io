@@ -259,6 +259,7 @@ function getFakeCars() {
 		'VZ1136': 'Toyota',
 		'WF3472': '',
 		'VT8075': '狗車 貨van私家車',
-		'UL5392': '狗車 貨van私家車'
+		'UL5392': '狗車 貨van私家車',
+		'RF6439': ''
 	};
 }
