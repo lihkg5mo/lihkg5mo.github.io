@@ -222,6 +222,33 @@ function getFiftyCents() {
 			exp: '不作解釋'
 		  }
 		]
+	  },
+	  {
+		uid: 30019,
+		name: '心水清清',
+		topics: [
+		  {
+			tid: 1527532,
+			link: 'https://lihkg.com/thread/1527532/page/6?ref=sharer&post=129',
+			topic: '全世界入黎！同我扮街坊',
+			msg: '咁驚俾拉就唔好出撚嚟喇，時代革命靠你呢哋人，實失敗',
+			exp: '長期宣揚失敗論，唱反調'
+		  },
+		  {
+			tid: 1279183,
+			link: 'https://lihkg.com/thread/1279183/page/4?ref=sharer&post=84',
+			topic: '中共嘅策略成功左了',
+			msg: '警察撤走嗮，引到啲勇武衝入立法會嗰一刻，今舖就已經完咗喇 四個訴求，依家爭取到幾多？政府不嬲都唔理',
+			exp: '長期宣揚失敗論，唱反調'
+		  },
+		  {
+			tid: 1562823,
+			link: 'https://lihkg.com/thread/1562823/page/6?ref=sharer&post=81',
+			topic: '太子要人！急！',
+			msg: '核你老母彈 單嘢明顯鳩吹出嚟 有人失蹤冇家屬企出嚟？',
+			exp: '長期宣揚失敗論，唱反調'
+		  }
+		]
 	  }
 	];
 }
