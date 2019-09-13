@@ -249,6 +249,19 @@ function getFiftyCents() {
 			exp: '長期宣揚失敗論，唱反調'
 		  }
 		]
+	  },
+	  {
+		uid: 230132,
+		name: '40好過你60AR',
+		topics: [
+		  {
+			tid: 1564686,
+			link: 'https://lihkg.com/thread/1564686/page/20?ref=sharer&post=192',
+			topic: '啱啱喺油麻地站跳咗閘 俾三條友圍住我',
+			msg: '比錢啦乞衣, 為左幾蚊, 十足十超巿高買D賊咁, 正曱甴乞衣, 樣9衰',
+			exp: '不作解釋'
+		  }
+		]
 	  }
 	];
 }
