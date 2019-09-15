@@ -262,6 +262,19 @@ function getFiftyCents() {
 			exp: '不作解釋'
 		  }
 		]
+	  },
+	  {
+		uid: 64699,
+		name: '強殖裝甲',
+		topics: [
+		  {
+			tid: 1571996,
+			link: 'https://lihkg.com/thread/1571996/page/8?ref=sharer&post=179',
+			topic: 'NOW影緊, 有手足係炮台山俾防暴打爆頭',
+			msg: '打得好!大快人心!',
+			exp: '不作解釋'
+		  }
+		]
 	  }
 	];
 }
