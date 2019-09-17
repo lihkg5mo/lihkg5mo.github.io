@@ -275,6 +275,26 @@ function getFiftyCents() {
 			exp: '不作解釋'
 		  }
 		]
+	  },
+	  {
+		uid: 51532,
+		name: '打鳩偷名賊',
+		topics: [
+		  {
+			tid: 1577396,
+			link: 'https://lihkg.com/thread/1577396/page/9?ref=sharer&post=206',
+			topic: '[突發]美國聽證會直播中 2',
+			msg: '老老實實激嬲中共大家無運行',
+			exp: '不作解釋'
+		  },
+		  {
+			tid: 1489882,
+			link: 'https://lihkg.com/thread/1489882/page/5?ref=sharer&post=97',
+			topic: '唔知警察記者會會點樣回應林卓廷條片?',
+			msg: '老實警民關系開始緩和緊無謂搞大件事',
+			exp: '不作解釋'
+		  }
+		]
 	  }
 	];
 }
