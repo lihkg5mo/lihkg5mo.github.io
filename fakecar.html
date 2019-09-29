@@ -98,26 +98,40 @@
 			
 			$scope.fakeCars = {};
 			
-			var fakeCars = getFakeCars();
-			Object.keys(fakeCars).sort().forEach(function(key) {
+			var fakeCars = getFakeCars().sort((a, b) => a.k.localeCompare(b.k));
+			// console.log(JSON.stringify(fakeCars));
+			for (var i = 0; i < fakeCars.length; i++) {
+				let key = fakeCars[i].k;
+				let val = fakeCars[i].v;
 				if ($scope.fakeCars[key] === undefined) {
-					$scope.fakeCars[key] = fakeCars[key];
+					$scope.fakeCars[key] = val;
 				} else {
-					console.log('duplicated plate: ' + key);
+					console.log('duplicated plate: ' + key + ' (' + $scope.fakeCars[key] + ' <-> ' + val + ')');
 				}
-			});
+			}
 			
 			$scope.filter = function() {
 				$scope.fakeCars = {};
-				Object.keys(fakeCars).sort().forEach(function(key) {
+				for (var i = 0; i < fakeCars.length; i++) {
+					let key = fakeCars[i].k;
+					let val = fakeCars[i].v;
+					
 					if ($scope.keyword.trim() != '') {
 						if (key.toLowerCase().indexOf($scope.keyword.trim().toLowerCase()) > -1) {
-							$scope.fakeCars[key] = fakeCars[key];
+							if ($scope.fakeCars[key] === undefined) {
+								$scope.fakeCars[key] = val;
+							} else {
+								console.log('duplicated plate: ' + key + ' (' + $scope.fakeCars[key] + ' <-> ' + val + ')');
+							}
 						}
 					} else {
-						$scope.fakeCars[key] = fakeCars[key];
+						if ($scope.fakeCars[key] === undefined) {
+							$scope.fakeCars[key] = val;
+						} else {
+							console.log('duplicated plate: ' + key + ' (' + $scope.fakeCars[key] + ' <-> ' + val + ')');
+						}
 					}
-				});
+				}
 			}
 		});
 	</script>
