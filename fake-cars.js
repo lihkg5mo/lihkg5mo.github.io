@@ -276,6 +276,8 @@ function getFakeCars() {
 		'PE4325': '',
 		'VT8858': '',
 		'UK5467': '',
-		'VC6174': ''
+		'VC6174': '',
+		'UP4752': 'Honda 7人車',
+		'RV1912': 'Toyota 7人車'
 	};
 }
